@@ -1,0 +1,28 @@
+<h1>Get in touch </h1>
+
+
+<!-- see the result : pe + Tab -->
+<%#= Time.now %>
+
+<!-- don't see the result: er + Tab -->
+<%# Time.now %>
+
+<!-- Create a variable to store the DC members -->
+<%# group = ['Beyoncé', 'Kelly', 'Michelle'] %>
+
+<form action="/contact" method="get">
+  <input type="text"
+         name="member"
+         value="<%= params[:member] %>"
+         placeholder="Who are you looking for?">
+  <input type="submit">
+</form>
+
+
+<ul>
+  <!-- Iterate through the group to access each member -->
+  <% @group.each do |member| %>
+    <!-- display the member -->
+    <li><%= member %></li>
+  <% end %>
+</ul>

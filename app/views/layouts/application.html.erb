@@ -11,6 +11,20 @@
   </head>
 
   <body>
+    <!-- NAVBAR -->
+    <div>
+      <h3>Put your navbar here</h3>
+      <!-- <a href="/about">About</a> -->
+      <ul>
+        <li><%= link_to 'Home', root_path %></li>
+        <li><%= link_to 'About', about_path %></li>
+        <li><%= link_to 'Contact', contact_path %></li>
+      </ul>
+
+    </div>
     <%= yield %>
+
+    <!-- FOOTER -->
+    <h3>Put the FOOTER here!</h3>
   </body>
 </html>
